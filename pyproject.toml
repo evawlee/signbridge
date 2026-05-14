@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "signbridge"
+version = "0.4.2"
+description = "release attestation gateway"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["signbridge*"]
+
+[tool.pytest.ini_options]
+python_files = ["test_*.py", "__eval_*_sec.py"]
+testpaths = ["tests"]
